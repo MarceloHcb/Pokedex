@@ -1,0 +1,48 @@
+button {
+    align-self: center;
+    justify-self: center;
+    background-color: rgb(245, 234, 33);
+    border-radius: 20px;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    border: none;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(233, 245, 71, 0.8) -6px -2px 16px 0px;
+    color: cornflowerblue;
+    position: absolute;
+    bottom: 60px;
+    margin-left: 600px;
+}
+
+.poks {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+    overflow: scroll;
+    box-shadow: rgba(32, 32, 196, 0.25) 0px 50px 100px -20px, rgba(59, 44, 224, 0.3) 0px 30px 60px -30px, rgba(200, 221, 36, 0.35) 0px -2px 6px 0px inset;
+}
+
+.prev {
+    right: 450px;
+}
+
+img {
+    width: 5rem;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+/* Refazer */
+
+H2 {
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: cornflowerblue;
+    color: rgb(247, 197, 7);
+
+}

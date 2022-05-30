@@ -1,0 +1,42 @@
+.pokeInfo{
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, aqua, red);
+    width: 100%;
+    height: 400vh;
+    gap: 6px;
+    padding: 30px;
+}
+h1{
+     font-family: "Pokemon";
+    -webkit-text-stroke-width: 2px;
+     -webkit-text-stroke-color: rgb(1,188,221);
+     color: rgb(247,197,7);
+     font-size: 5rem;    
+}
+.button{
+   right: 890px;
+   top: 60px;
+}
+.button1{
+    right: 260px;
+}
+.button2{
+    right: 890px;
+}
+.left-info, .right-info, .center-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.right-info{
+    padding-left: 40px;
+}
+.right-info h2{
+    margin-top: 40px;
+}
+.left-info{
+    align-items: flex-start;
+}
+
