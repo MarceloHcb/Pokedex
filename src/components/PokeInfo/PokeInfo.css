@@ -16,14 +16,14 @@ h1{
      font-size: 5rem;    
 }
 .button{
-   right: 890px;
+   right: 930px;
    top: 60px;
 }
 .button1{
-    right: 260px;
+    right: 240px;
 }
 .button2{
-    right: 890px;
+    right: 930px;
 }
 .left-info, .right-info, .center-info{
     display: flex;

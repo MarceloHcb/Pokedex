@@ -21,6 +21,9 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;  
     box-sizing: border-box;
+    word-wrap: break-word;
+  overflow-wrap:break-word ;
+}
   }
   a{
     text-decoration: none;

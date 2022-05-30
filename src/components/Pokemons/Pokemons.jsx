@@ -4,11 +4,8 @@ import { Card } from "../Card/Card"
 import { PokeInfo } from "../PokeInfo/PokeInfo"
 import styled from "styled-components"
 import "./Pokemons.css"
-import { BaseUrl } from "../BaseUrl"
+import { BaseUrl, limit } from "../BaseUrl"
 import { useParams } from "react-router-dom"
-
-
-const limit = `?limit=10&offset=0`
 
 const Pokemons = () => {
     const {name} = useParams()
@@ -16,10 +13,7 @@ const Pokemons = () => {
     const [pokemonsData, setPokemonsData] = useState([])
     const [loading, setLoading] = useState(true)
     const [next, setNext] = useState()
-    const [previous, setPrevious] = useState()      
-   
-        console.log(url)
-
+    const [previous, setPrevious] = useState() 
 
     const poke = async () => {       
         setLoading(true)
@@ -28,18 +22,14 @@ const Pokemons = () => {
         setPrevious(res.data.previous)
         getPokemon(res.data.results)        
         setLoading(false)
-
     }
     const getPokemon = async (res) => {
         res.map(async (item) => {
-            const result = await axios.get(item.url) 
-            console.log(result)          
+            const result = await axios.get(item.url)                    
             setPokemonsData(state => {
                 state = [...state, result.data]
-                state.sort((a, b) => a.id > b.id ? 1 : -1)
-                
-                return state;
-                
+                state.sort((a, b) => a.id > b.id ? 1 : -1)                
+                return state;                
             })
            
         })
@@ -78,7 +68,5 @@ const Pokemons = () => {
 const Div = styled.div`
     display:none;
 `
-
-
 
 export default Pokemons
