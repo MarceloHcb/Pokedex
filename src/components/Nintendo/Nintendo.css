@@ -4,7 +4,7 @@
     align-items: center;   
 }
 .container{  
-    width: 80rem;
+    width: 100rem;
     height: 80vh;
     background-image: linear-gradient(to right,rgb(1,188,221), rgb(231, 58, 46));
     border-radius: 80px; 
@@ -13,20 +13,20 @@
 }
 .center{
     background-color: grey;
-    width: 60rem;
+    width: 80rem;
     height: 78vh;
     border-radius: 20px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 .center-black{
     background-color: black;
-    width: 55rem;
+    width: 75rem;
     height: 72vh;
     border-radius: 20px;
 }
 .center-content{
     background-color: aliceblue;
-    width: 52rem;
+    width: 72rem;
     height: 68vh;
     border-radius: 5px;
     overflow: scroll;     
