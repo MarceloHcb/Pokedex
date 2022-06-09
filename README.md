@@ -6,7 +6,7 @@
 ## - ContextAPI ("Para manipulação do tema (claro e escuro) e adição da imagem do título")
 ## -Styled-Components (Estilização de Componentes)
  # _______________________________________________________________________
-<img src="./src/data/themes/images/poke.gif">
+<img src="/src/data/themes/images/poke.gif">
 
 ## Como Rodar o Projeto 👇
 ### `cd pokedex`
