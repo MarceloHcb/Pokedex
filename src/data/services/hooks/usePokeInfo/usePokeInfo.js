@@ -1,7 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { BaseUrl, limit, Limit } from "../../variables/BaseUrl"
-import { useParams } from "react-router-dom"
 
 export const usePokeInfo = () => {
     
@@ -10,6 +9,7 @@ export const usePokeInfo = () => {
     const [loading, setLoading] = useState(true)
     const [next, setNext] = useState()
     const [previous, setPrevious] = useState()
+    const [offset, setOffset] = useState(0)
 
     const poke = async () => {
         setLoading(true)
@@ -29,15 +29,23 @@ export const usePokeInfo = () => {
         const response = await fetch(`${BaseUrl}/${name}`)
         const data = await response.json()        
         return data
-    }
-    
+    }    
     
     useEffect(() => {
         
         poke()
 
     }, [url])  
-    
+    useEffect(() => {
+        const fetchData = async () => {
+            const names = await getPokemonList(offset)            
+             const pokemonsPromises = names.map(async pokemon => await getPokemon(pokemon))
+             const pokemonsData = await Promise.all(pokemonsPromises)
+                 .then(result => result)
+             setPokemons([ ...pokemonsData])
+        }
+        fetchData()
+    }, [offset,url])
     const [inputs, setInputs] = useState({
         text: ""
     })
@@ -56,9 +64,7 @@ export const usePokeInfo = () => {
         handleInputChange,
         inputs,
         loading,  
-        getPokemonList,  
-        getPokemon    
-    }   
-
-    )
+        setOffset,
+        offset
+    })      
 }

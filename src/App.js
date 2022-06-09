@@ -1,21 +1,16 @@
 import { createGlobalStyle } from 'styled-components';
-import { AppRoutes } from './data/Routes/Routes';
 import { PokeProvider } from './data/services/hooks/contexts/PokeContext';
 import { Body } from "./ui/components/Body/Body"
 
 function App() {  
   
-  return (
-   
-      <>
-      
+  return (   
+      <>      
       <PokeProvider>
       <GlobalStyle/>
       <Body/>
-      </PokeProvider>
-      
-      </>    
-        
+      </PokeProvider>      
+      </>        
 
   );
 }
@@ -26,8 +21,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     word-wrap: break-word;
   overflow-wrap:break-word ;
-}
-  
+}  
   a{
     text-decoration: none;
     color: black;

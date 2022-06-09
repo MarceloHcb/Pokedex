@@ -39,7 +39,6 @@ export const PokeCard = () => {
                         })} </h2>
                     </div>
 
-
                     <button className="button1" style={{ background: theme.backgroundButton, color: theme.colorButton }} onClick={() => {
                         nextP()
                     }}>next</button>

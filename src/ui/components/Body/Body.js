@@ -10,8 +10,7 @@ export const Body = () => {
         <Div 
         style={{background: theme.background}}>            
             <ImageLogo className="img" src={theme.logo} alt="" />
-            <Nintendo />
-            
+            <Nintendo />            
         </Div>
     )
 }

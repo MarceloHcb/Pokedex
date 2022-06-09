@@ -23,6 +23,5 @@ export const themes = {
         backgroundButton:`linear-gradient(to bottom, white, black)`,       
         image:`${arrowBlack}` ,
         translate: "translate(29px)"
-
      },
 }

@@ -2,13 +2,11 @@ import { usePokeInfo } from "../../../data/services/hooks/usePokeInfo/usePokeInf
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import "./PokeList.css"
-import { useContext, useEffect, useState } from "react"
+import { useContext } from "react"
 import { PokeContext } from "../../../data/services/hooks/contexts/PokeContext"
 import { SearchButton } from "../SearchButton/SearchButton"
 export const PokeList = () => {
-    const {theme} = useContext(PokeContext)
-    const [offset, setOffset] = useState(0)
-    const [pokemons,setPokemons] =useState([])    
+    const {theme} = useContext(PokeContext)        
     const {      
         next,
         previous,
@@ -16,22 +14,12 @@ export const PokeList = () => {
         url,
         handleInputChange,
         inputs,
-        loading,
-        getPokemonList,
-        getPokemon
+        loading,       
+        setOffset,
+        offset,
+        pokemons
 
-    } = usePokeInfo() 
-    
-    useEffect(() => {
-        const fetchData = async () => {
-            const names = await getPokemonList( offset)            
-             const pokemonsPromises = names.map(async pokemon => await getPokemon(pokemon))
-             const pokemonsData = await Promise.all(pokemonsPromises)
-                 .then(result => result)
-             setPokemons([ ...pokemonsData])
-        }
-        fetchData()
-    }, [offset,url])
+    } = usePokeInfo()   
 
     return (
         <>

@@ -4,8 +4,6 @@ import { ThemeButton } from "../ThemeButton/ThemeButton"
 import { useContext } from "react"
 import { PokeContext } from "../../../data/services/hooks/contexts/PokeContext"
 
-
-
 export const Nintendo = () => {    
     const {theme} = useContext(PokeContext)
     return (<>
