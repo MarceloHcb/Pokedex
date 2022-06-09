@@ -5,7 +5,7 @@
 ## - React Routes("foram criadas rotas navegação entre Páginas")   
 ## - ContextAPI ("Para manipulação do tema (claro e escuro) e adição da imagem do título")
 ## -Styled-Components (Estilização de Componentes)
- # _______________________________________________________________________
+ # _____________________________________________________________
 <img src="/src/data/themes/images/poke.gif">
 
 ## Como Rodar o Projeto 👇
