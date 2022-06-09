@@ -1,0 +1,29 @@
+
+.button{
+   right: 78rem;
+   top: 75px;
+}
+.button1{
+    right: 240px;
+}
+.button2{
+    right: 78rem;
+}
+.left-info, .right-info, .center-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.right-info{
+    padding-left: 40px;
+    overflow-y: scroll;
+    height: 15%;
+    width: 40%;    
+}
+.right-info h2{
+    margin-top: 40px;    
+}
+.left-info{
+    align-items: flex-start;
+}
+

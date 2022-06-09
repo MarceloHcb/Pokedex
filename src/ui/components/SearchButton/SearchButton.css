@@ -1,0 +1,24 @@
+.search{
+    bottom: 70px;
+    right: 280px;
+}
+#search{   
+    position: absolute;
+    bottom: 71px;
+    right: 400px;
+    height: 30px;    
+    border: none;  
+    border-radius: 5px; 
+    padding: 20px;
+    color: cornflowerblue;
+    opacity: .7;
+}
+#search:focus{
+    opacity: 100%;
+}
+input::placeholder {
+    color: cornflowerblue;
+  }
+.search:hover ~ #search{
+    display: flex;
+}

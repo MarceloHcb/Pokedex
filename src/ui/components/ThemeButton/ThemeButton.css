@@ -1,0 +1,45 @@
+/* relative
+ inline-flex 
+ h-[38px] w-[74px]
+  shrink-0 
+  cursor-pointer
+   rounded-full 
+   border-2 
+   border-transparent
+    transition-colors duration-200 ease-in-out
+     focus:outline-none 
+     focus-visible:ring-2 
+      focus-visible:ring-white
+      focus-visible:ring-opacity-75`} */
+
+/* 
+      pointer-events-none
+       inline-block 
+       h-[34px] w-[34px]
+        transform rounded-full
+         bg-white 
+         shadow-lg 
+         ring-0 
+         transition duration-200 ease-in-out`} */
+.toggle {
+    background-color: rgb(247, 197, 7);
+    width: 4.5rem;
+    height: 2rem;  
+    border-radius: 15px;
+    margin-bottom: 5px;
+    margin-left: 60rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+    
+}
+.toggle-circle{
+    content: "";
+    background-color: black;
+    width: 2rem;
+    height: 1.8rem;
+    position: absolute;
+    border-radius: 50%;  
+    transition: 0.5s ease-in-out;     
+}

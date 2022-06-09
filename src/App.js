@@ -1,18 +1,21 @@
 import { createGlobalStyle } from 'styled-components';
-import { Body } from './components/Body/Body';
-import { ThemeProvider } from './components/AppContext/theme-context';
-import { ThemeTogglerButton } from './components/theme-toggler-button/theme-toggler-button';
+import { AppRoutes } from './data/Routes/Routes';
+import { PokeProvider } from './data/services/hooks/contexts/PokeContext';
+import { Body } from "./ui/components/Body/Body"
 
-function App() {
+function App() {  
+  
   return (
-    <>
-      <ThemeProvider>
-       
-        <GlobalStyle />
-        <Body />
-      </ThemeProvider>
-
-    </>
+   
+      <>
+      
+      <PokeProvider>
+      <GlobalStyle/>
+      <Body/>
+      </PokeProvider>
+      
+      </>    
+        
 
   );
 }
@@ -24,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
     word-wrap: break-word;
   overflow-wrap:break-word ;
 }
-  }
+  
   a{
     text-decoration: none;
     color: black;
