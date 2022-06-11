@@ -16,7 +16,19 @@ button {
     margin-left: 900px; 
     font-weight: bold;     
 }
-
+.loading{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;    
+}
+h1{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: cornflowerblue;
+    color: rgb(247, 197, 7);
+    text-align: center;
+}
 .poks {
     cursor: pointer;
     position: relative;

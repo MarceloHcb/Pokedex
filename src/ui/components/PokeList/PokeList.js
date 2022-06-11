@@ -24,7 +24,7 @@ export const PokeList = () => {
     return (
         <>
             <Div  style={{background: theme.background1}}>
-                {loading ? <h1>Loading ...</h1> :
+                {loading ? <div className="loading"><h1>Loading ...</h1></div> :
                     pokemons.map((item, index) => {
 
                         return (
