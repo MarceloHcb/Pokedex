@@ -1,22 +1,39 @@
 .toggle {
-    background-color: rgb(247, 197, 7);
-    width: 4.5rem;
-    height: 2rem;  
-    border-radius: 15px;
-    margin-bottom: 5px;
-    margin-left: 60rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 5px;
-    
+background-color: rgb(247, 197, 7);
+width: 4.5rem;
+height: 2rem;  
+border-radius: 15px;
+margin-bottom: 5px;
+margin-left: 60rem;
+display: flex;
+justify-content: flex-start;
+align-items: center;
+padding: 5px;
+z-index: 100;
 }
 .toggle-circle{
-    content: "";
-    background-color: black;
-    width: 2rem;
-    height: 1.8rem;
-    position: absolute;
-    border-radius: 50%;  
-    transition: 0.5s ease-in-out;     
+content: "";
+background-color: black;
+width: 2rem;
+height: 1.8rem;
+position: absolute;
+border-radius: 50%;  
+transition: 0.5s ease-in-out;
+z-index: 100;  
+}
+
+@media (max-width: 1600px){
+.toggle {        
+margin-left: 40rem;        
+}
+}
+@media (max-width: 950px){
+.toggle {        
+margin-left: 20rem;        
+}
+}
+@media (max-width: 530px){
+.toggle {        
+margin-left: 15rem;        
+}
 }

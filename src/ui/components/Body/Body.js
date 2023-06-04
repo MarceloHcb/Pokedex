@@ -20,7 +20,10 @@ const Div = styled.div`
     display: flex;  
     justify-content: center;
     align-items: center;
-    flex-direction: column;   
+    flex-direction: column;  
+    @media(max-width: 530px){
+        height:120vh;
+    } 
 `
 const ImageLogo = styled.img`
     width: 250px;   

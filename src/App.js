@@ -10,8 +10,7 @@ function App() {
       <GlobalStyle/>
       <Body/>
       </PokeProvider>      
-      </>        
-
+      </>
   );
 }
 const GlobalStyle = createGlobalStyle`
@@ -20,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;  
     box-sizing: border-box;
     word-wrap: break-word;
-  overflow-wrap:break-word ;
+    overflow-wrap:break-word ;
 }  
   a{
     text-decoration: none;
@@ -28,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
     text-align: center;
 }
 ul li{
-   list-style: none;
+  list-style: none;
 }
 `
 export default App;

@@ -26,23 +26,21 @@ export const usePokeInfo = () => {
         return names
     }
     const getPokemon = async(name) =>{
-        const response = await fetch(`${BaseUrl}/${name}`)
-        const data = await response.json()        
+        const response = await fetch(`${BaseUrl}/${name}`)        
+        const data = await response.json()     
         return data
     }    
     
-    useEffect(() => {
-        
+    useEffect(() => {        
         poke()
-
     }, [url])  
     useEffect(() => {
         const fetchData = async () => {
             const names = await getPokemonList(offset)            
-             const pokemonsPromises = names.map(async pokemon => await getPokemon(pokemon))
-             const pokemonsData = await Promise.all(pokemonsPromises)
-                 .then(result => result)
-             setPokemons([ ...pokemonsData])
+            const pokemonsPromises = names.map(async pokemon => await getPokemon(pokemon))
+            const pokemonsData = await Promise.all(pokemonsPromises)
+                .then(result => result)
+            setPokemons([ ...pokemonsData])
         }
         fetchData()
     }, [offset,url])
@@ -53,8 +51,8 @@ export const usePokeInfo = () => {
         setInputs({
             text: event.target.value
         })
-    }        
-   
+    }    
+
     return ({
         pokemons,
         previous,

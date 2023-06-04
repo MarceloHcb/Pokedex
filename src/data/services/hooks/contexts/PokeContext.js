@@ -6,7 +6,7 @@ export const PokeProvider = (props) =>{
     const [theme, setTheme] = useState(themes.light)
     return (
         <PokeContext.Provider value={{theme,
-         setTheme}}>
+        setTheme}}>
             {props.children}
         </PokeContext.Provider>
     )
